@@ -645,7 +645,7 @@ public class FirebasePlugin extends CordovaPlugin {
                             // for instance if the the phone number format is not valid.
                             Log.w(TAG, "failed: verifyPhoneNumber.onVerificationFailed ", e);
 
-                            String errorMsg = "unknown error verifying number";
+                            String errorMsg = "unknown error verifying number: " + e.getMessage();
                             if (e instanceof FirebaseAuthInvalidCredentialsException) {
                                 // Invalid request
                                 errorMsg = "Invalid phone number";
